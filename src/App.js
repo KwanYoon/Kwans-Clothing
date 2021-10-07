@@ -35,7 +35,6 @@ class App extends React.Component {
       } else { // if signed out
         this.setState({ currentUser: userAuth });
       }
-      console.log(this.state);
     });
   }
 
