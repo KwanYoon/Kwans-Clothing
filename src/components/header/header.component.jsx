@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.utils';
+import { connect } from 'react-redux';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './header.styles.scss';
@@ -22,4 +23,8 @@ const Header = ({ currentUser }) => (
   </div>
 );
 
-export default Header;
+const mapStateToProps = state => ({ // state is the root reducer
+  currentUser: state.user.currentUser // grabbing currentUser from redux state
+});
+
+export default connect(mapStateToProps)(Header); // connect function lets you grab from redux
