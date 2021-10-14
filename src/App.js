@@ -8,6 +8,7 @@ import ShopPage from './pages/shop/shop.component.jsx';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx';
 import Header from './components/header/header.component.jsx';
 import './App.css';
+
 import { setCurrentUser } from './redux/user/user.actions';
 
 class App extends React.Component {
